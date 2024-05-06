@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 import pickle
-from pycaret.classification import *
 st.image("logo.png",width=700,caption='Logo of the AITIS project', use_column_width=True) # use_column_width=True可以让图像变清晰
 st.write('''
 # An online application for test-free screening and surveillance of sarcopenia

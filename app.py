@@ -118,8 +118,8 @@ if  uploaded_file is not None:
 else:
     st.write('Awaiting CSV file to be uploaded. Currently using input parameters of Module 2 (as shown below)')
     st.write(df)
-with open('model.pkl', 'rb') as file:
-    load_model = pickle.load(file)
+from joblib import dump, load
+load_model = load('model.joblib')
 prediction = load_model.predict(df)
 prediction_proba = load_model.predict_proba(df)
 st.subheader('Class labels and their corresponding index number')

@@ -4,13 +4,13 @@ import pandas as pd
 import numpy as np
 st.image("logo.png",width=700,caption='Logo of the AITIS project', use_column_width=True)
 st.write('''
+# An online application for test-free screening and surveillance of sarcopenia
+*Note*: This is a web app to predict the risk of sarcopenia in middle-aged and older adults (sarcopenia is defined using the Asian Working Group for Sarcopenia 2019 criteria) 
+based on age, sex, weight and function performance-related questions. Please answer each question in the sidebar to see the prediction.
+''')
+st.write('''
 ***Version 1.0.0 by Liangyu Yin, MD, PhD; Email: liangyuyin1988@qq.com or liangyuyin1988@tmmu.edu.cn***
         ''')
-st.write('''
-# An online application for test-free screening and surveillance of sarcopenia
-*Note*: This is a web to predict the risk of sarcopenia in middle-aged and older adults (sarcopenia is defined by the Asian Working Group for Sarcopenia 2019 criteria) 
-based on age, sex, weight and function performance-related questions as you can see in the sidebar. Please answer each question to see the prediction of the model.
-''')
 st.sidebar.header('Module 1: Batch Prediction')
 st.sidebar.markdown("""
 [Example CSV input file](https://github.com/kevinlyy/sarco/data_example.csv)
@@ -128,8 +128,8 @@ target_names = {0:'Not sarcopenia',
                 1:'Sarcopenia'}
 target = pd.DataFrame(target_names, index=[0])
 st.write(target)
-st.subheader('Prediction')
-st.write('Based on feature values, the prediction is '+ str(target[prediction]))
 st.subheader('Predicted probability of each class')
 st.write('''*Note*: This model uses 0.285 as the optimal threshold to indicate the positive class.''')
 st.write(prediction_proba)
+st.subheader('Prediction')
+st.write('Based on feature values, the prediction is '+ target[prediction])

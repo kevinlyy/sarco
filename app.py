@@ -1,8 +1,7 @@
+from pycaret.classification import load_model, predict_model
+import streamlit as st
 import pandas as pd
 import numpy as np
-import streamlit as st
-import pickle
-from sklearn.ensemble import GradientBoostingClassifier
 st.image("logo.png",width=700,caption='Logo of the AITIS project', use_column_width=True) # use_column_width=True可以让图像变清晰
 st.write('''
 # An online application for test-free screening and surveillance of sarcopenia
@@ -120,10 +119,10 @@ if  uploaded_file is not None:
 else:
     st.write('Awaiting CSV file to be uploaded. Currently using input parameters of Module 2 (as shown below)')
     st.write(df)
-with open('model.pkl', 'rb') as file:
-    load_model = pickle.load(file)
-prediction = load_model.predict(df)
-prediction_proba = load_model.predict_proba(df)
+load_model = load_model('model.pkl')
+result = predict_model(load_mode, df, probability_threshold=0.285,raw_score=True)
+prediction = result['Label']
+prediction_proba = result[['Score_0','Score_1']]
 st.subheader('Class labels and their corresponding index number')
 target_names = {0:'Not sarcopenia',
                 1:'Sarcopenia'}

@@ -26,7 +26,7 @@ else:
         sex = st.sidebar.selectbox('Sex', ('male', 'female'))
         height = st.sidebar.slider('Body height, m', 0.50, 2.50, 1.70)
         weight = st.sidebar.slider('Body weight, kg', 10, 150, 70)
-        st.sidebar.write('''*Do you have some difficulty to do the following tasks?*''')
+        st.sidebar.write('''***Do you have some difficulty to do the following tasks?***''')
         dressing = st.sidebar.selectbox('Dressing', ('yes','no'))
         bathing = st.sidebar.selectbox('Bathing', ('yes','no'))
         eating = st.sidebar.selectbox('Eating', ('yes','no'))

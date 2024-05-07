@@ -132,4 +132,4 @@ st.subheader('Predicted probability of each class')
 st.write('''*Note*: This model uses 0.285 as the optimal threshold to indicate the positive class.''')
 st.write(prediction_proba)
 st.subheader('Prediction')
-st.write('Based on feature values, the prediction is '+ target[prediction])
+target[prediction]

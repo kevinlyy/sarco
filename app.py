@@ -119,7 +119,7 @@ if  uploaded_file is not None:
 else:
     st.write('Awaiting CSV file to be uploaded. Currently using input parameters of Module 2 (as shown below)')
     st.write(df)
-load_model = load_model('model.pkl')
+load_model = load_model('model')
 result = predict_model(load_mode, df, probability_threshold=0.285,raw_score=True)
 prediction = result['Label']
 prediction_proba = result[['Score_0','Score_1']]

@@ -120,7 +120,7 @@ else:
     st.write('Awaiting CSV file to be uploaded. Currently using input parameters of Module 2 (as shown below)')
     st.write(df)
 load_model = load_model('model')
-result = predict_model(load_mode, df, probability_threshold=0.285,raw_score=True)
+result = predict_model(load_model, df, probability_threshold=0.285,raw_score=True)
 prediction = result['Label']
 prediction_proba = result[['Score_0','Score_1']]
 st.subheader('Class labels and their corresponding index number')

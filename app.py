@@ -5,8 +5,7 @@ import numpy as np
 st.image("logo.png",width=700,caption='Logo of the AITIS project', use_column_width=True)
 st.write('''
 # An online application for test-free screening and surveillance of sarcopenia
-*Note*: This is a web app to predict the risk of sarcopenia in middle-aged and older adults (sarcopenia is defined using the Asian Working Group for Sarcopenia 2019 criteria) 
-based on age, sex, weight and function performance-related questions. Please answer each question in the sidebar to see the prediction.
+*Note*: This is a web app to predict the risk of sarcopenia in middle-aged and older adults based on age, sex, height, weight and function performance-related questions. Please answer each question in the sidebar to see the prediction.
 ''')
 st.write('''
 ***Version 1.0.0 by Liangyu Yin, MD, PhD; Email: liangyuyin1988@qq.com or liangyuyin1988@tmmu.edu.cn***

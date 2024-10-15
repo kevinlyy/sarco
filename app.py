@@ -14,7 +14,7 @@ st.sidebar.header('Module 1: Batch Prediction')
 st.sidebar.markdown("""
 [Example CSV input file](https://github.com/kevinlyy/sarco/data_example.csv)
 """)
-st.set_option('deprecation.showfileUploaderEncoding', False)
+# st.set_option('deprecation.showfileUploaderEncoding', False)
 uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
 st.sidebar.header('Module 2: Individual Prediction')
 if uploaded_file is not None:
